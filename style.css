@@ -225,4 +225,29 @@ a:hover {
 
   .grid { grid-template-columns: 1fr; }
   .box { height: 70vh; }
+
+  /* Always-visible tap indicator on mobile since hover doesn't exist */
+  .overlay {
+    opacity: 1;
+    background: linear-gradient(
+      to top,
+      rgba(160, 59, 52, 0.85) 0%,
+      rgba(160, 59, 52, 0) 45%
+    );
+    align-items: flex-end;
+    padding: 0 24px 28px;
+  }
+
+  .reveal-text {
+    opacity: 1;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .reveal-text::after {
+    content: '→';
+    font-size: 1.6rem;
+  }
 }
